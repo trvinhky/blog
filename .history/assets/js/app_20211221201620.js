@@ -1,7 +1,5 @@
-// cập nhật năm hiện tại
 document.getElementById('date').innerText = (new Date()).getFullYear()
 
-// xử lý sự kiện cuộn trang cho thanh navbar
 $(window).scroll(function(e) {
     const pos_body = $('html,body').scrollTop()
     if (pos_body > 100) $('#header').addClass('scroll-top')
@@ -32,7 +30,7 @@ $('.nav-list__link:last-child').click((e) => {
 })
 
 function hideNav() {
-    $('.list-item').removeClass('active')
+    $('.list-item__icon').click()
 }
 
 $('.list-link__item:first-child').click((e) => {
@@ -52,11 +50,6 @@ $('.list-link__item:last-child').click((e) => {
     scrollThis(e, '#blog')
 })
 
-// Xử lý sự kiện ẩn hiện navbar trên mobile
-$('.nav-right__icon').click(() => $('.list-item').addClass('active'))
-$('.list-item__icon').click(hideNav)
-
-// Xử lý sự kiện click vào các nút
 $('#box-hire').click(function(e) {
     const test1 = e.target.closest('.hire')
     const test2 = e.target.closest('.hire-title__close')
@@ -105,7 +98,6 @@ $('.btn--connect').click(function() {
     })
 })
 
-// Xử lý sự kiện load nội dung khi cuộn trang
 const isElInViewPort = (el) => {
     const rect = el.getBoundingClientRect()
     const viewHeight = window.innerHeight || document.documentElement.clientHeight

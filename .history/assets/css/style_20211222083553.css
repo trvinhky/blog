@@ -137,11 +137,6 @@
     transform: translateX(-100%);
 }
 
-.list-item.active {
-    opacity: 1;
-    transform: translateX(0);
-}
-
 .list-item__icon {
     text-align: right;
 }
