@@ -204,7 +204,7 @@
 }
 
 .scroll-show .home-text {
-    transition: all 1s linear 0.1s;
+    transition: all 1s linear 0.2s;
     transform: translateX(-100%);
     opacity: 0;
 }

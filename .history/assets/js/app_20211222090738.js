@@ -107,6 +107,7 @@ $('.btn--connect').click(function() {
 
 // Xử lý sự kiện load nội dung khi cuộn trang
 const isElInViewPort = (el) => {
+    if(el.matches('.start')) $(item).removeClass('start')
     const rect = el.getBoundingClientRect()
     const viewHeight = window.innerHeight || document.documentElement.clientHeight
     return (

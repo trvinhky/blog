@@ -118,7 +118,7 @@ const isElInViewPort = (el) => {
 
 function handleScroll() {
     [...$('.scroll-show')].forEach((item) => {
-        if(isElInViewPort(item)) {
+        if(isElInViewPort(item) && !item.matches('.start')) {
             $(item).addClass('start')
         } else {
             $(item).removeClass('start')
